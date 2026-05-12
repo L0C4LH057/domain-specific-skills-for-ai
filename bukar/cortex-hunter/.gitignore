@@ -1,0 +1,37 @@
+# Cortex Hunter — gitignore
+# Prevents accidental leakage of engagement data and tool artifacts.
+
+# Per-target data (NEVER commit findings or scope artifacts)
+targets/*/
+!targets/.gitkeep
+
+# Filled target context
+TARGET_CONTEXT.md
+!TARGET_CONTEXT.template.md
+
+# Python venv from setup-kali.sh
+.venv/
+__pycache__/
+*.pyc
+
+# Node modules from setup-kali.sh
+node_modules/
+package-lock.json
+
+# Tool artifacts
+*.log
+*.tmp
+.DS_Store
+
+# Editor noise
+.vscode/
+.idea/
+*.swp
+*~
+
+# Local secrets
+.env
+.env.local
+*.token
+*.cookies
+sessions/
